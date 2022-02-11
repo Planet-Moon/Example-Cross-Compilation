@@ -1,0 +1,25 @@
+{
+    "cmake.configureOnOpen": false,
+    "cmake.generator": "Ninja",
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE":"${workspaceFolder}/toolchain.cmake",
+        // "VCPKG_MANIFEST_MODE": "ON",
+        // "VCPKG_MANIFEST_INSTALL": "ON",
+        // "VCPKG_TARGET_TRIPLET": "arm-linux",
+        // "VCPKG_TARGET_ARCHITECTURE":"arm",
+        // "VCPKG_TARGET_TRIPLET_ARCH":"arm",
+        // "VCPKG_HOST_TRIPLET": "x64-windows",
+        // "VCPKG_HOST_ARCHITECTURE": "x64-windows",
+        // "VCPKG_CHAINLOAD_TOOLCHAIN_FILE":"${workspaceFolder}/toolchain.cmake",
+        // "VCPKG_CMAKE_SYSTEM_NAME": "Linux",
+        // "VCPKG_LIBRARY_LINKAGE": "static",
+        // "VCPKG_CRT_LINKAGE": "dynamic",
+        // "VCPKG_PLATFORM_TOOLSET":"external",
+        // "CMAKE_C_COMPILER":"$ENV{CC}",
+        // "CMAKE_CXX_COMPILER":"$ENV{CXX}"
+    },
+    "cmake.environment": {
+        "CC":"E:/GNUArmEmbeddedToolchain/gcc-arm-10.3-2021.07-mingw-w64-i686-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-gcc.exe",
+        "CXX":"E:/GNUArmEmbeddedToolchain/gcc-arm-10.3-2021.07-mingw-w64-i686-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-g++.exe"
+    }
+}

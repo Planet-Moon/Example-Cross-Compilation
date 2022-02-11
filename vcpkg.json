@@ -1,0 +1,11 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+    "name": "arm-test",
+    "version": "0.0.1",
+    "dependencies": [
+        "libmodbus",
+        "openssl",
+        "paho-mqtt",
+        "paho-mqttpp3"
+    ]
+}
