@@ -9,8 +9,8 @@ set(CMAKE_GENERATOR "Ninja")
 
 # set(TARGET_TRIPLE arm-linux-gnueabihf)
 
-set(CMAKE_C_COMPILER "E:/GNUArmEmbeddedToolchain/gcc-arm-10.3-2021.07-mingw-w64-i686-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-gcc.exe")
-set(CMAKE_CXX_COMPILER "E:/GNUArmEmbeddedToolchain/gcc-arm-10.3-2021.07-mingw-w64-i686-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-g++.exe")
+set(CMAKE_C_COMPILER "D:/buildtools/armgcc/bin/arm-none-linux-gnueabihf-gcc.exe")
+set(CMAKE_CXX_COMPILER "D:/buildtools/armgcc/bin/arm-none-linux-gnueabihf-g++.exe")
 
 set(ARM_CORTEX "cortex-a53")
 
@@ -21,21 +21,25 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -mcpu=${ARM_CORTEX} -lpthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-g3 -O2 -rdynamic")
 set(CMAKE_CXX_FLAGS_RELEASE "-g0 -O0")
 
-add_compile_options("-mcpu=${ARM_CORTEX}")
+# add_compile_options("-mcpu=${ARM_CORTEX}")
 
-set(tools "E:/GNUArmEmbeddedToolchain/gcc-arm-10.3-2021.07-mingw-w64-i686-arm-none-linux-gnueabihf")
+# set(tools "E:/GNUArmEmbeddedToolchain/gcc-arm-10.3-2021.07-mingw-w64-i686-arm-none-linux-gnueabihf")
 
 set(
     CMAKE_PREFIX_PATH
-    ${tools}/arm-none-linux-gnueabihf/lib
-    ${tools}/lib/gcc/arm-none-linux-gnueabihf/10.3.1
-    ${tools}/arm-none-linux-gnueabihf/libc/usr/lib
-    ${tools}/lib
-    ${tools}/lib/gcc/arm-none-linux-gnueabihf/10.3.1/plugin
-    ${tools}/libexec/gcc/arm-none-linux-gnueabihf/10.3.1
-    ${tools}/arm-none-linux-gnueabihf/libc/usr/lib/audit
-    ${tools}/arm-none-linux-gnueabihf/libc/usr/lib/gconv
-    ${tools}/arm-none-linux-gnueabihf/lib
+    "D:/buildtools/armgcc"
+    "D:/buildtools/armgcc/arm-none-linux-gnueabihf"
+    "D:/buildtools/armgcc/arm-none-linux-gnueabihf/libc"
+    "D:/buildtools/armgcc/arm-none-linux-gnueabihf/libc/usr"
+    # ${tools}/arm-none-linux-gnueabihf/lib
+    # ${tools}/lib/gcc/arm-none-linux-gnueabihf/10.3.1
+    # ${tools}/arm-none-linux-gnueabihf/libc/usr/lib
+    # ${tools}/lib
+    # ${tools}/lib/gcc/arm-none-linux-gnueabihf/10.3.1/plugin
+    # ${tools}/libexec/gcc/arm-none-linux-gnueabihf/10.3.1
+    # ${tools}/arm-none-linux-gnueabihf/libc/usr/lib/audit
+    # ${tools}/arm-none-linux-gnueabihf/libc/usr/lib/gconv
+    # ${tools}/arm-none-linux-gnueabihf/lib
 )
 
 # set(
